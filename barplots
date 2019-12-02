@@ -1,0 +1,12 @@
+
+## barplot example
+par(oma=c(1,1,1,1)) 
+par(mar(c(4,5,2,1))) 
+barplot(feeds[order(feeds)], 
+        horiz=TRUE,
+        las = 1,
+        col=c("beige", "blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"), 
+        border=NA, 
+        main="Frequencines in Different Feeds\nin chickwts Dataset", 
+        xlab="Number of Chicks") 
+
