@@ -1,3 +1,4 @@
+feeds <-table(chickwts$feed)
 
 ## horizontal barplot
 par(oma=c(1,1,1,1)) 
@@ -9,5 +10,13 @@ barplot(feeds[order(feeds)],
         border=NA, 
         main="Frequencines in Different Feeds\nin chickwts Dataset", 
         xlab="Number of Chicks") 
+        
+#pie chart
+pie(feeds[order(feeds,decreasing=TRUE)], 
+          init.angle=90, 
+          clockwise=TRUE, 
+          col=c("beige", "blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"), 
+          main="Frequencines in Different Feeds\nin chickwts Dataset")
+
        
  
