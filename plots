@@ -25,11 +25,11 @@ pie(feeds[order(feeds,decreasing=TRUE)],
 #historgram   
 data(lynx)
 hist(lynx,
-     breaks=11, # num of bins
+     breaks=seq(0,7000, by=1000), ## define bins
      freq=FALSE,
      col="blanchedalmond", 
      main="Histogram of Lynx Trappings",
-     xlab="Number of Lynx Trapped")
+     xlab="Number of Lynx Trapped") 
  
  
  
