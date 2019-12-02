@@ -1,6 +1,8 @@
-feeds <-table(chickwts$feed)
+
 
 ## horizontal barplot
+data(chickwts)
+feeds <-table(chickwts$feed)
 par(oma=c(1,1,1,1)) 
 par(mar(c(4,5,2,1))) 
 barplot(feeds[order(feeds)], 
@@ -12,11 +14,22 @@ barplot(feeds[order(feeds)],
         xlab="Number of Chicks") 
         
 #pie chart
+data(chickwts)
+feeds <-table(chickwts$feed)
 pie(feeds[order(feeds,decreasing=TRUE)], 
           init.angle=90, 
           clockwise=TRUE, 
           col=c("beige", "blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"), 
           main="Frequencines in Different Feeds\nin chickwts Dataset")
-
-       
+          
+#historgram   
+data(lynx)
+hist(lynx,
+     breaks=11, # num of bins
+     freq=FALSE,
+     col="blanchedalmond", 
+     main="Histogram of Lynx Trappings",
+     xlab="Number of Lynx Trapped")
+ 
+ 
  
